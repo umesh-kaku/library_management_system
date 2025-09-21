@@ -1,0 +1,2 @@
+# Library Management System
+This is the project that I created for my Problem Solving with Programming course in my Semester 1 of MCA. Now I wish to finish the project so that it culminates into a desktop application. I plan to create a cross-platform application, so in its wake I am going to make use of C++ frameworks and libraries 
