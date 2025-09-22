@@ -11,7 +11,7 @@ private:
     string content;  
 public:
     bool sent_notification();
-    void set_notification_content();
+    void set_notification_content(string message);
     void set_notification_date();
 };
 #endif

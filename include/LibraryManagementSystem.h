@@ -1,18 +1,21 @@
 #ifndef LIBRARYMANAGEMENTSYSTEM_H
 #define LIBRARYMANAGEMENTSYSTEM_H
+#include "LibraryDatabase.h"
+#include "User.h"
+#include <string>
+using namespace std;
 class LibraryManagementSystem {
 private:
-    int id;
-    string name;
-    string username;
-    string password;
-    string phoneNumber;
-    string emailId;
+    LibraryDatabase* databaseObject;
+    User* currentUser;
+    bool isLoggedIn;
+    void show_login_menu();
+    void show_librarian_menu();
+    void show_customer_menu();
 public:
-    LibraryManagementSystem();
-    void create_account(int userId, string userName, string pass, string phone, string email);
-    bool login(string userName, string pass);
+    LibraryManagementSystem(LibraryDatabase* databaseObject);
+    void start_system();
+    void login(const string& username, const string& password);
     void logout();
-
 };
 #endif

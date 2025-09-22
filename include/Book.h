@@ -20,6 +20,6 @@ public:
     bool get_status();
     int get_id();
     string get_title();
-
+    void set_status(bool s);
 };
 #endif

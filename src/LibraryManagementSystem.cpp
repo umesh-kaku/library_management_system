@@ -3,28 +3,30 @@
 #include <iostream>
 using namespace std;
 
-LibraryManagementSystem::LibraryManagementSystem() {
+LibraryManagementSystem::LibraryManagementSystem(LibraryDatabase* databaseObject) {
+    this -> databaseObject = databaseObject;
+}
+
+void LibraryManagementSystem::start_system() {
 
 }
 
-void LibraryManagementSystem::create_account(int userId, string userName, string pass, string phone, string email) {
-    this -> id = userId;
-    this -> username = userName;
-    this -> password = pass;
-    this -> phoneNumber = phone;
-    this -> emailId = email;
-    cout << "Account created successfully for " << this -> name << endl;
-}
+void LibraryManagementSystem::login(const string& username, const string& password) {
 
-bool LibraryManagementSystem::login(string userName, string pass) {
-    if (userName == this -> username && pass == this -> password) {
-        cout << "Login successful!" << endl;
-        return true;
-    }
-    cout << "Invalid credentials!" << endl;
-    return false;
 }
 
 void LibraryManagementSystem::logout() {
-    cout << "Logged out successfully!" << endl;
+
+}
+
+void LibraryManagementSystem::show_login_menu() {
+
+}
+
+void LibraryManagementSystem::show_librarian_menu() {
+
+}
+
+void LibraryManagementSystem::show_customer_menu() {
+    
 }

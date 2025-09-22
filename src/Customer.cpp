@@ -50,8 +50,11 @@ void Customer::login(string userName, string pass) {
         }
     }
 
-    void Customer::reverse_book(LibraryDatabase& db, int bookId) {
-        cout << "Reversing operation for book ID: " << bookId << endl;
+    void Customer::reserve_book(LibraryDatabase& db, int bookId) {
+        Book* b = db.search(bookId);
+        if(!b) {
+            if(!(b -> get_status())) b -> set_status(true);
+        }
     }
 
     void Customer::logout() {

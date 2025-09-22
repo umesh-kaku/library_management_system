@@ -2,6 +2,14 @@
 #include <iostream>
 using namespace std;
 
+Book::Book(int id, string t, string s, string a) {
+    this -> bookId = id;
+    this -> title = t;
+    this -> subject = s;
+    this -> author = a;
+    this -> status = false;
+}
+
 void Book::display_book() {
     cout << "Book ID: " << this -> bookId << ", Title: " << title << ", Subject: " << subject << ", Author: " << author;
     cout << (status ? " (Available)" : " (Issued)") << endl;
@@ -21,4 +29,8 @@ int Book::get_id() {
 
 string Book::get_title() {
     return this -> title;
+}
+
+void Book::set_status(bool s) {
+    status = s;
 }
